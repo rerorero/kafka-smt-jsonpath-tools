@@ -1,2 +1,2 @@
-# kafka-stm-payload-basis-router
-Kafka connect single transform routing topic based on the field in message
+# kafka-smt-payload-basis-router
+Kafka connect single messge transform for topi routing based on the field in a message.
