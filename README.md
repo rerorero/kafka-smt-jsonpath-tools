@@ -29,7 +29,7 @@ Example:
 
 | Config        | Description                                                                                                                                                                          |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `type`        | Select `com.github.rerorero.kafka.smt.PayloadBasisRouter$Value` or `com.github.rerorero.kafka.smt.PayloadBasisRouter$Key` based on which field do you want to use for `replacement`. |
+| `type`        | Select `com.github.rerorero.kafka.smt.PayloadBasisRouter$Value` or </br>`com.github.rerorero.kafka.smt.PayloadBasisRouter$Key` based on </br> which field do you want to use for `replacement`. |
 | `replacement` | Topic name to route the message.                                                                                                                                                     |
 
 ### `replacement` format
