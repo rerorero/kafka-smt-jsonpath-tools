@@ -33,6 +33,11 @@ jobs:
       - name: assemble
         run: ./gradlew shadowJar
 
+      - name: e2e test with docker
+        shell: bash
+        working-directory: ./e2e
+        run: ./test.sh
+
       - name: Cleanup Gradle Cache
         # Remove some files from the Gradle cache, so they aren't cached by GitHub Actions.
         run: |
