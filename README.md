@@ -27,10 +27,10 @@ Example:
 | ------------- | -------------------------------- |
 | `replacement` | Topic name to route the message. |
 
-| Config        | Description                                                                                                                                                                          |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Config        | Description                                                                                                                                                                                     |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`        | Select `com.github.rerorero.kafka.smt.PayloadBasisRouter$Value` or </br>`com.github.rerorero.kafka.smt.PayloadBasisRouter$Key` based on </br> which field do you want to use for `replacement`. |
-| `replacement` | Topic name to route the message.                                                                                                                                                     |
+| `replacement` | Topic name to route the message.                                                                                                                                                                |
 
 ### `replacement` format
 
@@ -42,8 +42,8 @@ Only the following syntaxes are supported for now:
 | ------------ | --------------------------------------------------------------------------- |
 | `$`          | The root element. All JsonPath string has to be started with this operator. |
 | `.<name>`    | Dot-notated child.                                                          |
-| `['name']`   | Bracket-notated child. Multiple names are not supported.                    |
-| `[<number>]` | Array index. Multiple indices are not supported.                            |
+| `['name']`   | Bracket-notated child                                                       |
+| `[<number>]` | Array index.                                                                |
 
 # Build and Deployment
 
