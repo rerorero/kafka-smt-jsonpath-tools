@@ -1,4 +1,4 @@
-package com.github.rerero.kafka.smt;
+package com.github.rerorero.kafka.smt;
 
 import com.github.rerorero.kafka.jsonpath.JsonPath;
 import com.github.rerorero.kafka.jsonpath.JsonPath.Getter;

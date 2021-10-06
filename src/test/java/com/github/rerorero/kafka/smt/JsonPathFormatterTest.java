@@ -1,10 +1,10 @@
-package com.github.rerero.kafka.smt;
+package com.github.rerorero.kafka.smt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.github.rerero.kafka.smt.JsonPathFormatter.ForMap;
-import com.github.rerero.kafka.smt.JsonPathFormatter.ForStruct;
+import com.github.rerorero.kafka.smt.JsonPathFormatter.ForMap;
+import com.github.rerorero.kafka.smt.JsonPathFormatter.ForStruct;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;

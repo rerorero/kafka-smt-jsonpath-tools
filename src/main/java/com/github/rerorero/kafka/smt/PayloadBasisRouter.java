@@ -1,4 +1,4 @@
-package com.github.rerero.kafka.smt;
+package com.github.rerorero.kafka.smt;
 
 import static org.apache.kafka.connect.transforms.util.Requirements.requireMap;
 import static org.apache.kafka.connect.transforms.util.Requirements.requireStruct;
