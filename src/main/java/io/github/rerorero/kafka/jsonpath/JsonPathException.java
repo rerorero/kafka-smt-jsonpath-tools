@@ -1,4 +1,4 @@
-package com.github.rerorero.kafka.jsonpath;
+package io.github.rerorero.kafka.jsonpath;
 
 public class JsonPathException extends RuntimeException {
 

@@ -1,10 +1,10 @@
-package com.github.rerorero.kafka.smt;
+package io.github.rerorero.kafka.smt;
 
-import com.github.rerorero.kafka.jsonpath.JsonPath;
-import com.github.rerorero.kafka.jsonpath.JsonPath.Getter;
-import com.github.rerorero.kafka.jsonpath.JsonPathException;
-import com.github.rerorero.kafka.jsonpath.MapSupport;
-import com.github.rerorero.kafka.jsonpath.StructSupport;
+import io.github.rerorero.kafka.jsonpath.JsonPath;
+import io.github.rerorero.kafka.jsonpath.JsonPath.Getter;
+import io.github.rerorero.kafka.jsonpath.JsonPathException;
+import io.github.rerorero.kafka.jsonpath.MapSupport;
+import io.github.rerorero.kafka.jsonpath.StructSupport;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

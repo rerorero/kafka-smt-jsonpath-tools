@@ -1,7 +1,7 @@
-package com.github.rerorero.kafka.jsonpath;
+package io.github.rerorero.kafka.jsonpath;
 
-import com.github.rerorero.kafka.jsonpath.parser.JsonPathBaseListener;
-import com.github.rerorero.kafka.jsonpath.parser.JsonPathParser;
+import io.github.rerorero.kafka.jsonpath.parser.JsonPathBaseListener;
+import io.github.rerorero.kafka.jsonpath.parser.JsonPathParser;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.ArrayList;

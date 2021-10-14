@@ -1,9 +1,9 @@
 plugins {
   id 'java-library'
-  id 'com.github.johnrengelman.shadow' version '7.0.0'
+  id 'io.github.johnrengelman.shadow' version '7.0.0'
 }
 
-group = "com.github.rerorero"
+group = "io.github.rerorero"
 version = "0.1.0"
 
 ext {

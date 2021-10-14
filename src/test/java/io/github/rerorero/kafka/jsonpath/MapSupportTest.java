@@ -1,4 +1,4 @@
-package com.github.rerorero.kafka.jsonpath;
+package io.github.rerorero.kafka.jsonpath;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

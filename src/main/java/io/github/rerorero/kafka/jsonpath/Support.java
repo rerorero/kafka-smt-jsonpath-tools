@@ -1,7 +1,7 @@
-package com.github.rerorero.kafka.jsonpath;
+package io.github.rerorero.kafka.jsonpath;
 
-import com.github.rerorero.kafka.jsonpath.parser.JsonPathLexer;
-import com.github.rerorero.kafka.jsonpath.parser.JsonPathParser;
+import io.github.rerorero.kafka.jsonpath.parser.JsonPathLexer;
+import io.github.rerorero.kafka.jsonpath.parser.JsonPathParser;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;

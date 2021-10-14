@@ -18,7 +18,7 @@ Example:
   ...
 
   "transforms": "route",
-  "transforms.route.type": "com.github.rerorero.kafka.smt.PayloadBasisRouter$Value",
+  "transforms.route.type": "io.github.rerorero.kafka.smt.PayloadBasisRouter$Value",
   "transforms.route.replacement": "topic-{$.user.name}"
 }
 ```
@@ -29,7 +29,7 @@ Example:
 
 | Config        | Description                                                                                                                                                                                     |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`        | Select `com.github.rerorero.kafka.smt.PayloadBasisRouter$Value` or </br>`com.github.rerorero.kafka.smt.PayloadBasisRouter$Key` based on </br> which field do you want to use for `replacement`. |
+| `type`        | Select `io.github.rerorero.kafka.smt.PayloadBasisRouter$Value` or </br>`io.github.rerorero.kafka.smt.PayloadBasisRouter$Key` based on </br> which field do you want to use for `replacement`. |
 | `replacement` | Topic name to route the message.                                                                                                                                                                |
 
 ### `replacement` format

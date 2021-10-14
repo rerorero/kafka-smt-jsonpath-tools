@@ -1,4 +1,4 @@
-package com.github.rerorero.kafka.jsonpath;
+package io.github.rerorero.kafka.jsonpath;
 
 import org.apache.kafka.connect.data.ConnectSchema;
 import org.apache.kafka.connect.data.Schema;

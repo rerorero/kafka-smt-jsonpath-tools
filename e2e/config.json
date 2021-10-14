@@ -14,7 +14,7 @@
 
     "transforms": "route",
 
-    "transforms.route.type": "com.github.rerorero.kafka.smt.PayloadBasisRouter$Value",
+    "transforms.route.type": "io.github.rerorero.kafka.smt.PayloadBasisRouter$Value",
     "transforms.route.replacement": "topic-{$.userid}"
   }
 }

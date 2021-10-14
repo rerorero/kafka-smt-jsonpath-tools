@@ -1,10 +1,8 @@
-package com.github.rerorero.kafka.smt;
+package io.github.rerorero.kafka.smt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.github.rerorero.kafka.smt.JsonPathFormatter.ForMap;
-import com.github.rerorero.kafka.smt.JsonPathFormatter.ForStruct;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,18 +58,18 @@ class JsonPathFormatterTest {
   @ParameterizedTest
   @MethodSource("testReplaceForMapArguments")
   public void testReplaceForMap(String format, String expected) {
-    ForMap fm = new ForMap(format);
+    JsonPathFormatter.ForMap fm = new JsonPathFormatter.ForMap(format);
     assertEquals(expected, fm.replace(newMap()));
   }
 
   @Test
   public void testReplaceForMapFailure() {
     // invalid json path
-    assertThrows(DataException.class, () -> new ForMap("{{}}"));
+    assertThrows(DataException.class, () -> new JsonPathFormatter.ForMap("{{}}"));
     // unknown column
-    assertThrows(DataException.class, () -> new ForMap("{$.unknown}").replace(newMap()));
+    assertThrows(DataException.class, () -> new JsonPathFormatter.ForMap("{$.unknown}").replace(newMap()));
     // non string
-    assertThrows(DataException.class, () -> new ForMap("{$.struct}").replace(newMap()));
+    assertThrows(DataException.class, () -> new JsonPathFormatter.ForMap("{$.struct}").replace(newMap()));
   }
 
   static Schema SCHEMA;
@@ -127,17 +125,17 @@ class JsonPathFormatterTest {
   @ParameterizedTest
   @MethodSource("testReplaceForStructArgument")
   public void testReplaceForStruct(String format, String expected) {
-    ForStruct fs = new ForStruct(format);
+    JsonPathFormatter.ForStruct fs = new JsonPathFormatter.ForStruct(format);
     assertEquals(expected, fs.replace(newStruct()));
   }
 
   @Test
   public void testReplaceForStructFailure() {
     // invalid json path
-    assertThrows(DataException.class, () -> new ForStruct("{{}}"));
+    assertThrows(DataException.class, () -> new JsonPathFormatter.ForStruct("{{}}"));
     // unknown column
-    assertThrows(DataException.class, () -> new ForStruct("{$.unknown}").replace(newStruct()));
+    assertThrows(DataException.class, () -> new JsonPathFormatter.ForStruct("{$.unknown}").replace(newStruct()));
     // non string
-    assertThrows(DataException.class, () -> new ForStruct("{$.struct}").replace(newStruct()));
+    assertThrows(DataException.class, () -> new JsonPathFormatter.ForStruct("{$.struct}").replace(newStruct()));
   }
 }
