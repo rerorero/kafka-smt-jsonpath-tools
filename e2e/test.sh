@@ -6,7 +6,7 @@ set -eux
 docker-compose up -d --build connect
 trap 'docker-compose down' EXIT
 
-sleep 60
+sleep 100
 # start connect
 curl -X POST -H "Content-Type: application/json" --data @config.json http://localhost:8083/connectors
 sleep 20
