@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "io.github.rerorero"
-version = "0.1.0"
+version = "0.2.0"
 
 ext {
   kafkaVersion = "2.8.0"
