@@ -1,10 +1,9 @@
 package io.github.rerorero.kafka.smt;
 
-import io.github.rerorero.kafka.jsonpath.JsonPath;
-import io.github.rerorero.kafka.jsonpath.JsonPath.Getter;
+import io.github.rerorero.kafka.jsonpath.Accessor;
 import io.github.rerorero.kafka.jsonpath.JsonPathException;
-import io.github.rerorero.kafka.jsonpath.MapSupport;
-import io.github.rerorero.kafka.jsonpath.StructSupport;
+import io.github.rerorero.kafka.jsonpath.MapAccessor;
+import io.github.rerorero.kafka.jsonpath.StructAccessor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +17,7 @@ abstract class JsonPathFormatter<T> {
   static class GetterWithPath<T> {
 
     String jsPath;
-    JsonPath.Getter<T> getter;
+    Accessor.Getter<T> getter;
   }
 
   private static final Pattern BRACES_REGEX = Pattern.compile("\\{(.*?)\\}");
@@ -43,7 +42,7 @@ abstract class JsonPathFormatter<T> {
     }
   }
 
-  protected abstract JsonPath.Getter<T> newGetter(String jsPath);
+  protected abstract Accessor.Getter<T> newGetter(String jsPath);
 
   public String replace(T message) {
     StringBuilder sb = new StringBuilder();
@@ -88,8 +87,8 @@ abstract class JsonPathFormatter<T> {
     }
 
     @Override
-    protected JsonPath.Getter<Map<String, Object>> newGetter(String jsPath) {
-      return (Getter<Map<String, Object>>) MapSupport.newGetter(jsPath);
+    protected Accessor.Getter<Map<String, Object>> newGetter(String jsPath) {
+      return new MapAccessor.Getter(jsPath);
     }
   }
 
@@ -100,8 +99,8 @@ abstract class JsonPathFormatter<T> {
     }
 
     @Override
-    protected JsonPath.Getter<Struct> newGetter(String jsPath) {
-      return StructSupport.newGetter(jsPath);
+    protected Accessor.Getter<Struct> newGetter(String jsPath) {
+      return new StructAccessor.Getter(jsPath);
     }
   }
 }
