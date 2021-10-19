@@ -18,7 +18,7 @@ repositories {
 dependencies {
   implementation "org.apache.kafka:connect-api:${kafkaVersion}"
   implementation "org.apache.kafka:connect-transforms:${kafkaVersion}"
-  implementation 'io.github.rerorero:kafka-connect-jsonpath-accessor:0.1.0'
+  implementation 'io.github.rerorero:kafka-connect-jsonpath-accessor:0.2.0'
 
   // for testing
   testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
@@ -29,7 +29,7 @@ dependencies {
 }
 
 shadowJar {
-  archiveFileName = "kafka-smt-payload-basis-router.jar"
+  archiveFileName = "kafka-smt-jsonpath-tools.jar"
   dependencies {
     exclude(dependency('org.apache.kafka::.*'))
   }
