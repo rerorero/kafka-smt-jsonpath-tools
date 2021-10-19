@@ -35,8 +35,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./build/libs/kafka-smt-payload-basis-router.jar
-          asset_name: kafka-smt-payload-basis-router.jar
+          asset_path: ./build/libs/kafka-smt-jsonpath-tools.jar
+          asset_name: kafka-smt-jsonpath-tools.jar
           asset_content_type: binary/octet-stream
 
       - name: Cleanup Gradle Cache

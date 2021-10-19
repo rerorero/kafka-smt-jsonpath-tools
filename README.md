@@ -1,15 +1,15 @@
-# kafka-smt-payload-basis-router
-
-Kafka connect single message transform (SMT) for topic routing based on the field in a message.
-
-- You can use the field values in a Kafka message to specify the name of the topic to route to.
-- Using JsonPath-like expression.
+# kafka-smt-jsonpath-tools
 
 # Installation
 
-[Download the jar file from the release page](https://github.com/rerorero/kafka-smt-payload-basis-router/releases) and copy it into a directory that is under one of the plugin.path. [This doccument](https://docs.confluent.io/platform/current/connect/transforms/custom.html) would help you.
+[Download the jar file from the release page](https://github.com/rerorero/kafka-jsonpath-tools/releases) and copy it into a directory that is under one of the plugin.path. [This doccument](https://docs.confluent.io/platform/current/connect/transforms/custom.html) would help you.
 
-# Configurations
+## PayloadBasisRouter
+
+SMT for topic routing based on the field in a message.
+
+- You can use the field values in a Kafka message to specify the name of the topic to route to.
+- Using JsonPath-like expression.
 
 Example:
 
@@ -27,23 +27,15 @@ Example:
 | ------------- | -------------------------------- |
 | `replacement` | Topic name to route the message. |
 
-| Config        | Description                                                                                                                                                                                     |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Config        | Description                                                                                                                                                                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`        | Select `io.github.rerorero.kafka.smt.PayloadBasisRouter$Value` or </br>`io.github.rerorero.kafka.smt.PayloadBasisRouter$Key` based on </br> which field do you want to use for `replacement`. |
-| `replacement` | Topic name to route the message.                                                                                                                                                                |
+| `replacement` | Topic name to route the message. It can include one or more fields in Kafka message value or key. Fields are specified as JaonPath string enclosed in `{}` like `{$.user.name}`.              |
 
-### `replacement` format
+## Json Path expression
 
-`replacement` can include one or more fields in the Kafka message value or key. Fields are specified as JsonPath-like string enclosed in `{}` e.g. `{$.user.name}`.
-
-Only the following syntaxes are supported for now:
-
-| Operator     | Description                                                                 |
-| ------------ | --------------------------------------------------------------------------- |
-| `$`          | The root element. All JsonPath string has to be started with this operator. |
-| `.<name>`    | Dot-notated child.                                                          |
-| `['name']`   | Bracket-notated child                                                       |
-| `[<number>]` | Array index.                                                                |
+Not all grammers are supported. Please see here for the current limitations:
+[rerorero/kafka-connect-jsonpath-accessor#json-path-expressions](https://github.com/rerorero/kafka-connect-jsonpath-accessor#json-path-expressions)
 
 # Build and Deployment
 
